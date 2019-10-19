@@ -2,8 +2,7 @@ def oxford_comma(array)
   if array.count == 1
     array.join
   else
-    array << array.index(-2) + "and " + array.pop
-    oxford_arr = array.join(", ")
-    oxford_arr
+    oxford_arr = array[0..-2].join(", ")
+    oxford_arr + "and " + array.pop
   end
 end
